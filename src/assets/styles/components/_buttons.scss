@@ -1,0 +1,29 @@
+// Variables
+@import "../../styles/helpers/variables";
+
+//Mixins
+@import "../../styles/helpers/mixins";
+
+button {
+  background: $primaryColor;
+  min-height:42px;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  @include font(16px,500);
+  @include bRadius(21px);
+  @include border(0,null,null);
+  box-shadow: none;
+  outline: none;
+  padding: 7px 22px;
+  cursor: pointer;
+  transition:(.3s ease-in-out);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include rtl_value(flex-flow, row, row-reverse);
+  &:focus {
+    outline: none;
+  }
+
+}

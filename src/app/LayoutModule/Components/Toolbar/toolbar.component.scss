@@ -1,0 +1,27 @@
+//Variables
+@import "../../../../assets/styles/helpers/variables";
+
+//Mixins
+@import "../../../../assets/styles/helpers/mixins";
+
+mat-toolbar {
+  background: #fff;
+  height: 80px;
+  @include prefixer(box-shadow, 0 4px 10px 0 rgba(198, 198, 198, 0.14), webkit moz o ms);
+  position: relative;
+  z-index: 99;
+  padding: 0 30px;
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .logo {
+      width: 300px;
+      @include rtl_value(float, left, right);
+    }
+    .search {
+      width: 300px;
+    }
+  }
+}

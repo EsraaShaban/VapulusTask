@@ -1,0 +1,17 @@
+// Variables
+@import "../../../../../assets/styles/helpers/mixins";
+
+.mat-card {
+  padding: 0;
+  width: 250px;
+  height: 150px;
+  margin-bottom: 15px;
+  @include prefixer(box-shadow, 0 4px 8px 0 rgba(191, 194, 206, 0.1), webkit moz o ms);
+  float: left;
+  margin-right: 15px;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

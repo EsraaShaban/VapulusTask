@@ -1,0 +1,23 @@
+<!-- Toolbar -->
+<mat-toolbar>
+  <div class="content">
+    <!-- Title -->
+    <div class="logo">
+      <strong>Wookie Movies</strong>
+    </div>
+
+    <span class="space"></span>
+
+    <!-- Search -->
+    <div class="search">
+      <form>
+        <div class="input">
+          <mat-form-field>
+            <input matInput [(formControl)]="model.searchText" placeholder="Search"  maxlength="100" />
+            <mat-error *ngIf="model.searchText.hasError('maxlength')"> Max Length is 100</mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </div>
+</mat-toolbar>

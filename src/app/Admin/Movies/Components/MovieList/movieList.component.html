@@ -1,0 +1,8 @@
+<!-- List -->
+<div class="list">
+  <!-- <h4>{{model.MovieType}}</h4> -->
+  <div class="items">
+    <!-- -->
+    <movie-item *ngFor="let movie of model.movies" [data]="movie" (onClick)="model.toDetails(movie)"></movie-item>
+  </div>
+</div>

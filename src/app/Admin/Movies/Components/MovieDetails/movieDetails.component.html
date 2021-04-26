@@ -1,0 +1,29 @@
+<!-- Details -->
+<mat-card class="details">
+  <!-- Image -->
+  <div class="image">
+    <img [src]="model.data.backdrop" />
+  </div>
+  <!-- Info -->
+  <div class="info">
+    <!-- Title -->
+    <div class="title">
+      <h4>{{model.data.title}} ({{model.data.imdb_rating}})</h4>
+      <span class="space"></span>
+      <mat-icon [class.filled]="model.firstStarFilled">star</mat-icon>
+      <mat-icon [class.filled]="model.secondStarFilled">star</mat-icon>
+      <mat-icon [class.filled]="model.thirdStarFilled">star</mat-icon>
+      <mat-icon [class.filled]="model.fourthStarFilled">star</mat-icon>
+      <mat-icon [class.filled]="model.fifthStarFilled">star</mat-icon>
+    </div>
+    <p>{{model.data.released_on | date: "mediumDate"}} | {{model.data.length}} | {{model.data.director}}</p>
+    <p class="cast">
+      <strong>Cast: </strong>
+      <span *ngFor="let cast of model.data.cast">{{cast}} , </span>
+    </p>
+    <p>
+      <strong>Movie Description: </strong>
+      <span>{{model.data.overview}}</span>
+    </p>
+  </div>
+</mat-card>
