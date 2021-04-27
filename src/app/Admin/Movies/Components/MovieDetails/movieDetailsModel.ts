@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
 import { APICallerService } from "src/app/SharedModule/Services/apiCaller.service";
 import { IMovieItem } from "../MovieItem/iMovieItem";
 import { MovieItemComponent } from "../MovieItem/movieItem.component";
@@ -20,12 +20,18 @@ export class MovieDetailsModel {
   public fourthStarFilled: boolean = false;
   public fifthStarFilled: boolean = false;
 
-  constructor(private apiCaller: APICallerService, private route: ActivatedRoute, private router: Router) {
+  constructor(private apiCaller: APICallerService, private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
       this.data.id = params["id"];
     })
+
     if(this.data.id)
       this.getMovieDetails();
+  }
+
+  // Show Description
+  public get ShowDescription() {
+    return this.data.overview;
   }
 
   // Get Movies
