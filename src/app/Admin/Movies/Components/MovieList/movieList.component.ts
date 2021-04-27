@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { IMovieItem } from '../MovieItem/iMovieItem';
+import { Component } from '@angular/core';
 import { MovieListModel } from './movieListModel';
 
 @Component({
@@ -11,10 +10,6 @@ import { MovieListModel } from './movieListModel';
 
 export class MovieListComponent {
 
-  @Output() public onClick: EventEmitter<IMovieItem> = new EventEmitter<IMovieItem>();
-
-  constructor(public model: MovieListModel) {
-    this.model.onClick.subscribe((item) => this.onClick.emit(item));
-  }
+  constructor(public model: MovieListModel) { }
 
 }

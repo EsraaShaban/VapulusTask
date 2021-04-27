@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MovieItemModel } from './movieItemModel';
 import { IMovieItem } from './iMovieItem';
+import { MovieType } from './enums';
 
 @Component({
   selector: 'movie-item',
@@ -14,9 +15,9 @@ export class MovieItemComponent {
   @Input() public set data(data: IMovieItem) {
     this.model.data = data;
   }
- // @Input() public set type(type: IMovieItem) {
-  //  this.model.data = data;
-  //}
+  // @Input() public set type(type: MovieType) {
+  //   this.model.movieType = type;
+  // }
   @Output() public onClick: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(public model: MovieItemModel) {

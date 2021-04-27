@@ -1,8 +1,29 @@
 <!-- List -->
 <div class="list">
-  <!-- <h4>{{model.MovieType}}</h4> -->
-  <div class="items">
-    <!-- -->
-    <movie-item *ngFor="let movie of model.movies" [data]="movie" (onClick)="model.toDetails(movie)"></movie-item>
+  <!-- Action Type -->
+  <div class="type">
+    <h4>Action</h4>
+    <div class="items">
+      <!-- Item -->
+      <movie-item *ngFor="let movie of model.actionMovies" [data]="movie" (onClick)="model.toDetails(movie)"></movie-item>
+    </div>
+  </div>
+
+  <!-- Drama Type -->
+  <div class="type">
+    <h4>Drama</h4>
+    <div class="items">
+      <!-- Item -->
+      <movie-item *ngFor="let movie of model.dramaMovies" [data]="movie" (onClick)="model.toDetails(movie)"></movie-item>
+    </div>
+  </div>
+
+  <!-- Crime Type -->
+  <div class="type">
+    <h4>Crime</h4>
+    <div class="items">
+      <!-- Item -->
+      <movie-item *ngFor="let movie of model.crimeMovies" [data]="movie" (onClick)="model.toDetails(movie)"></movie-item>
+    </div>
   </div>
 </div>
